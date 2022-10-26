@@ -3,10 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	txt := hello()
-	x, _ := fmt.Println(txt)
-	fmt.Println(x)
-	test3()
+	test4()
 }
 
 func hello() string {
@@ -85,4 +82,19 @@ func test3() {
 
 	s := fmt.Sprintf("%x\n", y)
 	fmt.Println(s)
+}
+
+func test4() {
+
+	type hotdog int
+
+	var a int
+	var b hotdog
+
+	fmt.Printf("%T\n", a)
+	fmt.Printf("%T\n", b)
+
+	a = int(b) // 타입 변환!!!
+
+	fmt.Printf("%T\n", a)
 }
