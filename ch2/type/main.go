@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 var x bool
 
@@ -14,4 +17,12 @@ func main() {
 	x = 10 < 5
 
 	fmt.Println(x)
+
+	y := 12.3
+	fmt.Printf("%T\n", y)
+
+	var test uint
+	fmt.Printf("%T\n", test)
+	fmt.Println(runtime.GOOS)
+	fmt.Println(runtime.GOARCH)
 }
