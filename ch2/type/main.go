@@ -90,4 +90,48 @@ func main() {
 	fmt.Println(second)
 	fmt.Println(third)
 	fmt.Println(forth)
+
+	test()
+}
+
+// Go는 while 문이 없다. Only for!!!
+
+func test() {
+	/*
+			for i := 0; i <= 10; i++ {
+				for j := 0; j <= 10; j++{
+
+				}
+				fmt.Println("test", i)
+			}
+
+
+		a := 3
+		b := 10
+
+		for a < b {
+			fmt.Println(a)
+			a++
+		}
+
+		for {
+			if a > 10 {
+				break
+			}
+			a++
+			fmt.Println("test")
+		}
+	*/
+
+	x := 83 / 40
+	y := 83 % 40
+	fmt.Println(x, y)
+
+	for i := 0; i <= 100; i++ {
+		if i%2 != 0 {
+			continue
+		}
+
+		fmt.Println(i)
+	}
 }
