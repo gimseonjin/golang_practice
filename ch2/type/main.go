@@ -153,4 +153,16 @@ func testIf() {
 	} else {
 		fmt.Println("Else")
 	}
+
+	switch {
+	case false:
+		fmt.Println("false")
+		fallthrough
+	case false:
+		fmt.Println("test2")
+	case 1 == 1:
+		fmt.Println("test")
+	default:
+		fmt.Println("test default ")
+	}
 }
