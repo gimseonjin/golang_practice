@@ -120,4 +120,15 @@ func test2() {
 
 	// 1 ~ 5
 	fmt.Println(x[:5])
+
+	x = append(x, 52)
+	fmt.Println(x)
+
+	x = append(x, 52, 53, 54)
+	fmt.Println(x)
+
+	y := []int{8, 912}
+	x = append(x, y...)
+	fmt.Println(x)
+
 }
