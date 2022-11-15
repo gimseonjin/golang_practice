@@ -55,4 +55,11 @@ func slice_slice() {
 	x = append(x, y...)
 	fmt.Println(x)
 
+	// remove
+	x = append(x[:2], x[4:]...)
+	fmt.Println(x)
+
+	// with make
+	k := make([]int, 10, 100)
+	fmt.Println(k)
 }
