@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	slice()
+	slice_slice()
 }
 
 func arr1() {
@@ -41,4 +41,18 @@ func slice() {
 	for i, v := range m {
 		fmt.Println(i, v)
 	}
+}
+
+func slice_slice() {
+	x := []int{1, 2, 3, 4, 5}
+
+	fmt.Println(x[0:3])
+
+	x = append(x, 1, 2, 3, 4)
+	fmt.Println(x)
+
+	y := []int{7, 8, 9}
+	x = append(x, y...)
+	fmt.Println(x)
+
 }
