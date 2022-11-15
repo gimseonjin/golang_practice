@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	test2()
+	test4()
 }
 
 func arr1() {
@@ -131,4 +131,28 @@ func test2() {
 	x = append(x, y...)
 	fmt.Println(x)
 
+}
+
+func test3() {
+
+	x := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+
+	x = append(x[:3], x[4:]...)
+
+	fmt.Println(x)
+}
+
+func test4() {
+	// 강원도ㆍ경기도ㆍ경상도ㆍ전라도ㆍ충청도ㆍ평안도ㆍ함경도ㆍ황해도
+	name := make([]string, 0, 8)
+	fmt.Println(len(name))
+	fmt.Println(cap(name))
+
+	name = append(name, "강원도", "경기도", "경상도", "전라도", "충청도", "평안도", "함경도", "황해도")
+	fmt.Println(len(name))
+	fmt.Println(cap(name))
+
+	for x := 0; x < len(name); x++ {
+		fmt.Println(x, name[x])
+	}
 }
