@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	arr1()
+	slice()
 }
 
 func arr1() {
@@ -24,4 +24,21 @@ func arr1() {
 	fmt.Println(type_y)
 	// 따라서 둘의 타입을 비교하면 False!
 	fmt.Println(type_x == type_y)
+}
+
+func slice() {
+	x := []int{4, 5, 6, 7}
+	fmt.Println(x)
+
+	for i, v := range x {
+		fmt.Println(i, v)
+	}
+
+	m := map[string]string{
+		"1": "test",
+	}
+
+	for i, v := range m {
+		fmt.Println(i, v)
+	}
 }
