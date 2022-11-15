@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	test1()
+	test2()
 }
 
 func arr1() {
@@ -113,4 +113,11 @@ func test1() {
 	fmt.Println(reflect.TypeOf(slice))
 	fmt.Println(len(slice))
 	fmt.Println(cap(slice))
+}
+
+func test2() {
+	x := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+
+	// 1 ~ 5
+	fmt.Println(x[:5])
 }
