@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	slice_slice()
+	multi_slice()
 }
 
 func arr1() {
@@ -62,4 +62,12 @@ func slice_slice() {
 	// with make
 	k := make([]int, 10, 100)
 	fmt.Println(k)
+}
+
+func multi_slice() {
+	jb := []string{"kim"}
+	mp := []string{"seonjin"}
+
+	total := [][]string{jb, mp}
+	fmt.Println(total)
 }
