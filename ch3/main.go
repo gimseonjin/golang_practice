@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	test_map()
+	test1()
 }
 
 func arr1() {
@@ -92,4 +92,25 @@ func test_map() {
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
+}
+
+func test1() {
+	arr := [5]int{1, 2, 3, 4, 5}
+	slice := make([]int, 5, 10)
+
+	for i, v := range arr {
+		fmt.Println(i, v)
+	}
+
+	for i, v := range slice {
+		fmt.Println(i, v)
+	}
+
+	fmt.Println(reflect.TypeOf(arr))
+	fmt.Println(len(arr))
+	fmt.Println(cap(arr))
+
+	fmt.Println(reflect.TypeOf(slice))
+	fmt.Println(len(slice))
+	fmt.Println(cap(slice))
 }
