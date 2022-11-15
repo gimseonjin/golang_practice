@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	multi_slice()
+	test_map()
 }
 
 func arr1() {
@@ -70,4 +70,26 @@ func multi_slice() {
 
 	total := [][]string{jb, mp}
 	fmt.Println(total)
+}
+
+func test_map() {
+	m := map[string]int{
+		"seonjin": 27,
+	}
+	fmt.Println(m)
+
+	m["jeni"] = 35
+
+	v, ok := m["jeni"]
+	fmt.Println(v, ok)
+
+	delete(m, "jeni")
+
+	if v, ok := m["seonjin"]; ok {
+		fmt.Println(v)
+	}
+
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
 }
