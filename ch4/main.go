@@ -38,8 +38,8 @@ func main(){
 	}
 
 
-	test1()
-	
+	test2()
+
 	fmt.Println(p1, p2.first, p3)
 }
 
@@ -59,4 +59,28 @@ func test1(){
 
 	fmt.Println(p)
 
+}
+
+func test2(){
+
+	type person struct {
+		first string
+		last string
+		favoriteIceCream []string
+	}
+
+	p := person{
+		first : "kim",
+		last : "jijn",
+		favoriteIceCream : []string {"merona"},
+	}
+
+	pmap := map[string]person{
+		p.last : p,
+	}
+
+	for k, v := range(pmap){
+		fmt.Println(k, v)
+	}
+	
 }
