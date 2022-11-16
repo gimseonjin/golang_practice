@@ -5,11 +5,17 @@ import (
 )
 
 func main(){
+	defer bar("tset")
+	defer bar("tset2")
 	xi := []int{1,2,3,4,5}
 	sum := variableArgument(xi...)
-	fmt.Println(sum)
-
+	fmt.Println(sum)	
 }
+
+// maybe defer using stack 
+// [tset] -> [tset, tset2] -> [tset] -> []
+
+// defer를 쓰는 케이스 -> 파일을 열고, 로직이 끝날 떄 까지 기다리면 컴퓨터 자원 낭비!! -> 따라서 파일 읽고 defer로 로직을 미룬 다음, 파일을 닫아버릴 수 있다!!
 
 // default function form
 // func (r receiver) identifier(parameters) (return(s)) {...}
