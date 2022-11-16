@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	test5()
+	test6()
 }
 
 func arr1() {
@@ -168,4 +168,24 @@ func test5(){
 			fmt.Println(i, j, v2)
 		}
 	}
+}
+
+func test6(){
+	hs := map[string][]string{
+
+		"test" : []string{"test1", "test2", "test3"},
+
+	}
+
+	hs["test2"] = []string{"1"}
+
+	delete(hs, "test2")
+
+	for k, v := range(hs){
+		for i, v2 := range(v){
+			fmt.Println(k,i,v2)
+		}
+	}
+
+
 }
