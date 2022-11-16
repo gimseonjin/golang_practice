@@ -6,14 +6,9 @@ import (
 
 func main(){
 
-	s := "test"
+	sum := variableArgument(1,2,3,4,5)
+	fmt.Println(sum)
 
-	foo()
-	bar(s)
-
-	name, r := returnTwoValue("kim", "seonjin")
-
-	fmt.Println(name, r)
 }
 
 // default function form
@@ -36,4 +31,15 @@ func returnTwoValue(first string, last string) (name string, result bool){
 	new_result := true
 
 	return new_name, new_result
+}
+
+func variableArgument(x ...int) int{
+
+	sum := 0
+
+	for _, v := range x{
+		sum += v
+	}
+
+	return sum
 }
