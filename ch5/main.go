@@ -5,8 +5,8 @@ import (
 )
 
 func main(){
-
-	sum := variableArgument(1,2,3,4,5)
+	xi := []int{1,2,3,4,5}
+	sum := variableArgument(xi...)
 	fmt.Println(sum)
 
 }
