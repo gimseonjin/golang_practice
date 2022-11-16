@@ -37,5 +37,26 @@ func main(){
 		second : "jin",
 	}
 
+
+	test1()
+	
 	fmt.Println(p1, p2.first, p3)
+}
+
+
+func test1(){
+	type person struct {
+		first string
+		last string
+		favoriteIceCream []string
+	}
+
+	p := person{
+		first : "kim",
+		last : "jijn",
+		favoriteIceCream : []string {"merona"},
+	}
+
+	fmt.Println(p)
+
 }
