@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	test4()
+	test5()
 }
 
 func arr1() {
@@ -154,5 +154,18 @@ func test4() {
 
 	for x := 0; x < len(name); x++ {
 		fmt.Println(x, name[x])
+	}
+}
+
+func test5(){
+	x1 := []string{"kim","kim","kim"}
+	x2 := []string{"lee","lee","lee"}
+
+	x3 := [][]string{x1,x2}
+
+	for i, v := range(x3){
+		for j, v2 := range(v){
+			fmt.Println(i, j, v2)
+		}
 	}
 }
