@@ -38,7 +38,7 @@ func main(){
 	}
 
 
-	test2()
+	test3()
 
 	fmt.Println(p1, p2.first, p3)
 }
@@ -79,8 +79,46 @@ func test2(){
 		p.last : p,
 	}
 
-	for k, v := range(pmap){
+	for k, v := range pmap{
 		fmt.Println(k, v)
 	}
 	
+}
+
+
+type vehicle struct {
+	doors string
+	color string
+}
+
+type truck struct {
+	vehicle
+	fourWheel bool
+}
+
+type sedan struct {
+	vehicle
+	luxury bool
+}
+
+func test3(){
+
+	t := truck{
+		vehicle : vehicle{
+			doors : "2",
+			color : "blue",
+		},
+		fourWheel : true,
+	}
+
+	s := sedan{
+		vehicle : vehicle{
+			doors : "4",
+			color : "black",
+		},
+		luxury : true,
+	}
+
+	fmt.Println(t)
+	fmt.Println(s)
 }
