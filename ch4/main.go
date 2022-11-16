@@ -29,5 +29,13 @@ func main(){
 		second : "jin",
 	}
 
-	fmt.Println(p1, p2.first)
+	p3 := struct{
+		first string
+		second string
+	}{
+		first : "kim",
+		second : "jin",
+	}
+
+	fmt.Println(p1, p2.first, p3)
 }
