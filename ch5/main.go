@@ -5,11 +5,15 @@ import (
 )
 
 func main(){
-	defer bar("tset")
-	defer bar("tset2")
-	xi := []int{1,2,3,4,5}
-	sum := variableArgument(xi...)
-	fmt.Println(sum)	
+	a1 := agent{
+		person : person{
+			first : "kim",
+			last : "seonjin",
+		},
+		ltk : false,
+	}
+
+	a1.speak()
 }
 
 // maybe defer using stack 
@@ -48,4 +52,20 @@ func variableArgument(x ...int) int{
 	}
 
 	return sum
+}
+
+// #################################################
+
+type person struct{
+	first string
+	last string
+}
+
+type agent struct{
+	person
+	ltk bool
+}
+
+func (a agent) speak(){
+	fmt.Println(a.first, a.last, a.ltk)
 }
